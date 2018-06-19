@@ -1,0 +1,99 @@
+bash-2.05# ./debug.pl
+
+Loading DB routines from perl5db.pl version 1.28
+Editor support available.
+
+Enter h or `h h' for help, or `man perldebug' for more help.
+
+main::(./debug.pl:9):   my $iCnt = 10;
+ DB<1> l
+9==>  my $iCnt = 10;
+10:     my $sStr = "This is a string";
+11:     my $sSubStr = ( $sStr =~ /([\w]+)/) [0];
+12      
+13:     print "String [$sStr] Sub-Str [$sSubStr]\n";
+14      
+15:     my $iRet = &increment ( $iCnt );
+16      
+17      sub increment {
+18:       my ( $iC ) = @_;
+ DB<1> n
+main::(./debug.pl:10):        my $sStr = "This is a string";
+ DB<1> p $iCnt
+10
+ DB<2> n
+main::(./debug.pl:11):        my $sSubStr = ( $sStr =~ /([\w]+)/) [0];
+ DB<2> p $sStr
+This is a string
+ DB<3> p $sSubStr
+Use of uninitialized value in print at (eval 9)[/opt/VRTSperl/lib/5.8.8/perl5db.pl:628] line 2.
+ at (eval 9)[/opt/VRTSperl/lib/5.8.8/perl5db.pl:628] line 2
+        eval '($@, $!, $^E, $,, $/, $\\, $^W) = @saved;package main; $^D = $^D | $DB::db_stop;
+print {$DB::OUT}  $sSubStr;
+
+;' called at /opt/VRTSperl/lib/5.8.8/perl5db.pl line 628
+        DB::eval called at /opt/VRTSperl/lib/5.8.8/perl5db.pl line 3410
+        DB::DB called at ./debug.pl line 11
+
+ DB<4> n
+main::(./debug.pl:13):        print "String [$sStr] Sub-Str [$sSubStr]\n";
+ DB<4> p $sSubStr
+This
+ DB<5> l
+13==> print "String [$sStr] Sub-Str [$sSubStr]\n";
+14      
+15:     my $iRet = &increment ( $iCnt );
+16      
+17      sub increment {
+18:       my ( $iC ) = @_;
+19      
+20:       ++ $iC;
+21      
+22:       return ( $iC );
+ DB<5> step
+
+ DB<6> s
+String [This is a string] Sub-Str [This]
+main::(./debug.pl:15):  my $iRet = &increment ( $iCnt );
+ DB<6> li 
+15==> my $iRet = &increment ( $iCnt );
+16      
+17      sub increment {
+18:       my ( $iC ) = @_;
+19      
+20:       ++ $iC;
+21      
+22:       return ( $iC );
+23      }
+24      
+ DB<6> s
+main::increment(./debug.pl:18):         my ( $iC ) = @_;
+ DB<6> l
+18==>   my ( $iC ) = @_;
+19      
+20:       ++ $iC;
+21      
+22:       return ( $iC );
+23      }
+24      
+25      #
+26      # Run the following 
+27      # DB<n> l # list the contents of the program..
+ DB<6> n p $ @_
+10
+ DB<7> n
+main::increment(./debug.pl:20):         ++ $iC;
+ DB<7> p $i    n
+main::increment(./debug.pl:22):         return ( $iC );
+ DB<7> p $iC
+11
+ DB<8> n
+Debugged program terminated.  Use q[m to quit or [1mR[m to restart,
+  use o [4minhibit_exit[m to avoid stopping after program termination,
+  h q, [1mh R[m or [1mh o[m to get additional info.  
+ DB<8> l
+9421==>           "Debugged program terminated.  Use `q' to quit or `R' to restart.";
+9422    }
+9423    
+9424    package DB;    # Do not trace this 1; below!
+ DB<8> q

@@ -1,0 +1,142 @@
+//
+// $Source: /project/hal_test/iauto/sample/Run_Envrmnt/system_db_ccs_inst_qa_pun.txt,v $
+//
+// $Id: system_db_ccs_inst_qa_pun.txt,v 1.3 2009/06/27 07:40:54 hmarne Exp $
+//
+// $Copyright: Copyright (c) 2010 Symantec Corporation.
+// All rights reserved.
+//
+// THIS SOFTWARE CONTAINS CONFIDENTIAL INFORMATION AND TRADE SECRETS OF
+// SYMANTEC CORPORATION.  USE, DISCLOSURE OR REPRODUCTION IS PROHIBITED
+// WITHOUT THE PRIOR EXPRESS WRITTEN PERMISSION OF SYMANTEC CORPORATION.
+//
+// The Licensed Software and Documentation are deemed to be commercial
+// computer software as defined in FAR 12.212 and subject to restricted
+// rights as defined in FAR Section 52.227-19 "Commercial Computer
+// Software - Restricted Rights" and DFARS 227.7202, "Rights in
+// Commercial Computer Software or Commercial Computer Software
+// Documentation", as applicable, and any successor regulations. Any use,
+// modification, reproduction release, performance, display or disclosure
+// of the Licensed Software and Documentation by the U.S. Government
+// shall be solely in accordance with the terms of this Agreement.  $
+//
+{
+	"instqasol10-1.vxindia.veritas.com" : {
+		"Login" : "root",
+		"Password" : "share123", 
+		"OS" : "Solaris",
+		"ConnectionType" : "telnet"
+	},
+		
+	"instqasol10-2.vxindia.veritas.com" : {
+		"Login" : "root",
+		"Password" : "share123", 
+		"OS" : "Solaris",
+		"ConnectionType" : "telnet"
+	},
+	
+	"instqasol10-3.vxindia.veritas.com" : {
+		"Login" : "root",
+		"Password" : "share123", 
+		"OS" : "Solaris",
+		"ConnectionType" : "telnet"
+	},
+	
+	"ccssolinstall1.vxindia.veritas.com" : {
+		"Login" : "root",
+		"Password" : "share123", 
+		"OS" : "Solaris",
+		"ConnectionType" : "telnet"
+	},
+	
+	"linuxtest-1.vxindia.veritas.com" : {
+		"Login" : "root",
+		"Password" : "scm123",
+		"OS" : "Linux",
+		"ConnectionType" : "telnet"
+	},
+	
+	"bajiprabhu.vxindia.veritas.com" : {
+	        "Login" : "root",
+	        "Password" : "share123",
+		"OS" : "Solaris",
+	        "ConnectionType" : "telnet"
+	},
+		
+	"calvin.vxindia.veritas.com" : {
+	        "Login" : "root",
+	        "Password" : "share123",
+		"OS" : "Solaris",
+	        "ConnectionType" : "telnet"
+	},
+	
+	"sal_blade-2.vxindia.veritas.com" : {
+	        "Login" : "root",
+	        "Password" : "share123",
+		"OS" : "Solaris",
+	       	"ConnectionType" : "telnet"
+	},
+		
+	"sal_blade-3.vxindia.veritas.com" : {
+		"Login" : "root",
+	       	"Password" : "share123",
+		"OS" : "Solaris",
+	        "ConnectionType" : "telnet"
+	},
+	
+	"instqaaix52_1.vxindia.veritas.com" : {
+	       	"Login" : "root",
+	        "Password" : "share123",
+		"OS" : "AIX",
+	        "ConnectionType" : "telnet"
+	},
+		
+	"instqaaix53_1.vxindia.veritas.com" : {
+	        "Login" : "root",
+	        "Password" : "share123",
+		"OS" : "AIX",
+	        "ConnectionType" : "telnet"
+	},
+	
+	"instqahp-1.vxindia.veritas.com" : {
+	        "Login" : "root",
+	        "Password" : "share123",
+		"OS" : "HP-UX",
+	        "ConnectionType" : "telnet"
+	},
+	
+	"ccshfhp-1.vxindia.veritas.com" : {
+	        "Login" : "root",
+	        "Password" : "share123",
+		"OS" : "HP-UX",
+	        "ConnectionType" : "telnet"
+	},
+	
+	"ccsvmware.vxindia.veritas.com" : {
+	        "Login" : "root",
+	        "Password" : "share123",
+		"OS" : "Linux",
+	        "ConnectionType" : "telnet"
+	},
+	
+	"ccshflinas4-1.vxindia.veritas.com" : {
+	        "Login" : "root",
+	        "Password" : "share123",
+		"OS" : "Linux",
+	        "ConnectionType" : "telnet"
+	},
+	
+	"instqaes4-1.vxindia.veritas.com" : {
+		"Login" : "root",
+		"Password" : "share123",
+		"OS" : "Linux",
+		"ConnectionType" : "telnet"
+	},
+	
+	"scmqavmlin2.vxindia.veritas.com" : {
+		"Login" : "root",
+		"Password" : "scm123",
+		"OS" : "Linux",
+		"ConnectionType" : "ssh"
+	}
+}
